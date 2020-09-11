@@ -1,0 +1,33 @@
+---
+title: "Problem and solution for advanced R"
+author: "Yong Qiao"
+date: "9/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Download the source file. 
+
+Hadley Wickham's book, Advanced R. He provide source code for this book. <https://github.com/hadley/adv-r>.
+
+First we Clone with HTTPS using the following link in local computer <https://github.com/hadley/adv-r.git>
+
+```{r cars}
+devtools::install_github("hadley/sloop")
+devtools::install_github("hadley/emo")
+bookdown::render_book("./index.Rmd", output_format = "bookdown::pdf_book")
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
